@@ -1,0 +1,105 @@
+html, body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+}
+
+
+.wrapper{
+	min-height:100%;
+	position:relative;
+}
+
+.main-container{
+	padding-bottom:200px;
+}
+
+.padding-0{
+	padding:0px;
+}
+
+.btn,.form-control{
+	border-radius:0px;
+}
+
+.alert{
+	padding:5px 10px;
+	margin-top:5px;
+	border-radius:0px;
+}
+
+.login-form,.register-form{
+	max-width: 600px;
+    float: none;
+    margin: 0 auto;
+}
+
+
+/***** anchor style with no href ***************/
+
+.nav, .pagination, .carousel, .panel-title a { cursor: pointer; }
+
+/***************** ng-cloak to hide {{}} during js loading ****************/
+[ng\:cloak], [ng-cloak], [data-ng-cloak], [x-ng-cloak], .ng-cloak, .x-ng-cloak {
+  display: none !important;
+}
+
+.action-icons > span{
+	font-size:2rem;
+	cursor: pointer;
+}
+
+.action-icons > span:first-child{
+	margin-right:10px;
+}
+/************* Footer ***************************/
+
+footer{
+	width: 100%;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    padding-top: 30px;
+    padding-bottom: 10px;
+    margin-top: 100px;
+    color: #99979c;
+    text-align: center;
+    background-color: #2a2730
+}
+/************* Navbar designs *********************/
+
+.navbar-default{
+	background-color: #00bcd4;
+    border-color: #00bcd4;
+    border-radius:0px;
+}
+
+.navbar-default .navbar-brand{
+	color:#FFF;
+	font-size:3rem;
+}
+
+.navbar-default .navbar-brand:focus, .navbar-default .navbar-brand:hover{
+	color: rgba(255, 255, 255, 0.8);
+}
+
+.navbar-default .navbar-nav>li>a {
+    color: #FFF;
+    font-size: 1.8rem;
+}
+
+.navbar-default .navbar-nav.no-content>li>a:focus, .navbar-default .navbar-nav.no-content>li>a:hover {
+    color: #FFF;
+    background-color: transparent;
+    outline: none;
+}
+
+@media(max-width:768px){
+	.navbar-header{
+		float:left;
+	}
+	
+	.nav.navbar-right{
+		float:right;
+	}
+}

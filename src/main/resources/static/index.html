@@ -1,0 +1,50 @@
+<html>
+<head>
+<!-- META -->
+<meta charset="utf-8">
+<!-- Optimize mobile viewport -->
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<title>Todo App</title>
+<link href="vendors/bootstrap/dist/css/bootstrap.min.css"
+	rel="stylesheet">
+<link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+
+<div class="wrapper">
+	<!-- Header -->
+
+	<div ui-view="header"></div>
+	
+	<!--  main - content  -->
+	<div class="container main-container">
+		<div ui-view="main"></div>
+	</div>
+
+	
+	<!-- Footer -->
+	
+	<div ui-view = "footer"></div>
+
+</div>
+	<script src="vendors/angular/angular.min.js"></script>
+	<script src="vendors/angular-ui-router/release/angular-ui-router.min.js"></script>
+	<script src="vendors/angular-bootstrap/ui-bootstrap.min.js"></script>
+	<script src="modules/core/app/config.js"></script>
+	<script src="modules/core/app/init.js"></script>
+	<script src="modules/core/core.client.module.js"></script>
+	<script src="modules/todo/todo.client.module.js"></script>
+	<script src="modules/common/common.client.module.js"></script>
+	<script src="modules/user/user.client.module.js"></script>
+	<script src="modules/core/service/auth.client.interceptor.js"></script>
+	<script src="modules/user/service/user.client.service.js"></script>
+	<script src="modules/user/service/authenticate.client.service.js"></script>
+	<script src="modules/user/controller/login.client.controller.js"></script>
+	<script src="modules/user/controller/register.client.controller.js"></script>
+	<script src="modules/todo/service/todo.client.service.js"></script>
+	<script src="modules/todo/controller/todo.client.controller.js"></script>
+	<script src="modules/common/controller/header.client.controller.js"></script>
+	
+</body>
+</html>

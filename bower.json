@@ -1,0 +1,29 @@
+{
+  "name": "spring-sql",
+  "version": "1.0.0",
+  "authors": [
+    "amitrai48 <amitrai48@gmail.com>"
+  ],
+  "description": "A simple todo app using spring boot mysql and angularjs",
+  "keywords": [
+    "spring-boot",
+    "mysql",
+    "angularjs"
+  ],
+  "license": "MIT",
+  "homepage": "https://github.com/amitrai48/springboot-mysql",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "src/main/resources/static/vendor",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "angular": "^1.5.2",
+    "bootstrap": "^3.3.6",
+    "angular-ui-router": "^0.2.18",
+    "angular-bootstrap": "^1.3.1"
+  }
+}

@@ -1,0 +1,63 @@
+	<div class="row">
+		<div class="col-md-6 col-md-offset-3">
+			<div class="jumbotron text-center">
+				<h2>
+					You've got <span class="label label-info">{{(todos |
+						filter:{completed:false}).length }}</span> things to do.
+				</h2>
+			</div>
+		</div>
+	</div>
+
+	<div class="row">
+		<div class="col-md-6 col-md-offset-3 text-center">
+			<form role="form" name="createForm"
+				data-ng-submit="createForm.$valid && createTodo()">
+				<div class="form-group">
+					<div class="input-group">
+						<input type="text" class="form-control"
+							data-ng-model="newTodo.title" placeholder="Add todo.." required />
+
+						<span class="input-group-btn" style="background-color: #fff;">
+							<button type="submit" class="btn btn-primary">Add</button>
+						</span>
+					</div>
+				</div>
+			</form>
+		</div>
+	</div>
+
+	<div class="row" data-ng-show="todos.length>0">
+		<div class="col-md-6 col-md-offset-3">
+			<div class="row" data-ng-repeat="todo in todos">
+				<div data-ng-show="editedTodo !== todo">
+					<label class="col-sm-10"> <input type="checkbox"
+						data-ng-model="todo.completed" data-ng-click="saveTodo(todo)" />
+						&nbsp;&nbsp;{{todo.title}}
+					</label>
+					<div class="col-sm-2 text-right action-icons">
+						<span class="glyphicon glyphicon-pencil"
+							data-ng-click="editTodo(todo)"></span> <span
+							class="glyphicon glyphicon-remove-circle"
+							data-ng-click="deleteTodo(todo)"></span>
+					</div>
+				</div>
+
+				<div data-ng-show="editedTodo === todo" class="col-xs-12">
+					<form role="form" name="editForm"
+						data-ng-submit="editForm.$valid && saveTodo(todo)">
+						<div class="input-group">
+							<span class="input-group-addon"> <input type="checkbox"
+								data-ng-model="todo.completed" />
+							</span> <input type="text" class="form-control"
+								data-ng-model="todo.title" required /> <span
+								class="input-group-btn">
+								<button type="submit" class="btn btn-primary">Edit</button>
+							</span>
+						</div>
+
+					</form>
+				</div>
+			</div>
+		</div>
+	</div>

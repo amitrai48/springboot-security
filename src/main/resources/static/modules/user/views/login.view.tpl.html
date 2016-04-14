@@ -1,0 +1,51 @@
+<div class="col-xs-12 panel panel-success padding-0 col-sm-8 login-form">
+	<div class="panel-heading">
+		<h3 class="panel-title">Login</h3>
+	</div>
+
+	<div class="panel-body">
+		<form class="form-horizontal" role="form" name="loginForm"
+			data-ng-submit="loginForm.$valid && loginUser()" novalidate>
+			<div class="col-xs-12">
+				<div class="col-sm-10 col-sm-offset-2 alert alert-danger"
+					data-ng-if="error.hasError">{{error.message}}</div>
+				<div class="form-group">
+					<label class="control-label col-sm-2" for="username">
+						Username </label>
+					<div class="col-sm-10">
+						<input type="text" name="username" id="username"
+							class="form-control" data-ng-model="user.username" required />
+						<div
+							data-ng-if="loginForm.$submitted || loginForm.username.$dirty || loginForm.username.$touched">
+							<div data-ng-if="loginForm.username.$error.required"
+								class="alert alert-danger">Username is required</div>
+						</div>
+					</div>
+				</div>
+
+				<div class="form-group">
+					<label class="control-label col-sm-2" for="password">
+						Password</label>
+					<div class="col-sm-10">
+						<input type="password" id="password" name="password"
+							class="form-control" data-ng-model="user.password" required />
+						<div
+							data-ng-if="loginForm.$submitted || loginForm.password.$dirty || loginForm.password.$touched">
+							<div data-ng-if="loginForm.password.$error.required"
+								class="alert alert-danger">password is required</div>
+						</div>
+					</div>
+				</div>
+				<div class="form-group">
+					<div class="col-xs-12">
+						<button type="submit" class="btn btn-success pull-right">
+							Login</button>
+					</div>
+				</div>
+				<div class="col-xs-12 col-sm-offset-2">
+					<span>New User? <a ui-sref="register"> Register .</a></span>
+				</div>
+			</div>
+		</form>
+	</div>
+</div>
